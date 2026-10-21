@@ -38,7 +38,7 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 .instagram-link svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; }
 .instagram-link .instagram-dot { fill: currentColor; stroke: none; }
 .menu-toggle { display: none; }
-.hero { position: relative; min-height: min(710px, calc(100svh - 72px)); height: min(710px, calc(100svh - 72px)); overflow: hidden; background: #2b2119 url('assets/hero-poster.jpg') center/cover no-repeat; color: #fffaf4; }
+.hero { position: relative; min-height: min(710px, calc(100svh - 72px)); height: min(710px, calc(100svh - 72px)); overflow: hidden; background: #2b2119 url('assets/hero.webp') center/cover no-repeat; color: #fffaf4; }
 .hero-video, .story > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-video { object-position: center 53%; }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23,18,14,.07) 10%, rgba(23,18,14,.1) 42%, rgba(23,18,14,.75) 100%), linear-gradient(0deg, rgba(19,15,12,.52), transparent 28%); }
@@ -144,6 +144,7 @@ h2 em { font-weight: 400; }
   .primary-nav a { padding: 14px 0; border-bottom: 1px solid rgba(43,37,31,.08); font-size: 12px; }
   .primary-nav .mobile-order-link { display: flex; justify-content: center; align-items: center; gap: 12px; min-height: 46px; margin-top: 12px; padding: 0 18px; border: 0; border-radius: 99px; background: var(--ink); color: var(--paper); }
   .hero { height: min(700px, calc(100svh - 62px)); min-height: 590px; }
+  .hero { background-position: 41% center; }
   .hero-video { object-position: 41% center; }
   .hero-shade { background: linear-gradient(0deg, rgba(21,16,12,.8) 0%, rgba(21,16,12,.33) 48%, rgba(21,16,12,.02) 100%); }
   .hero-content { top: auto; right: 25px; bottom: 104px; left: 25px; width: auto; transform: none; }
