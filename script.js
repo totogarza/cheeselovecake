@@ -59,7 +59,7 @@ form.addEventListener('submit', async (event) => {
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify({ name, phone: phoneDigits, flavor, consent, website })
     });
-    showMessage('Gracias. Enviamos tu solicitud y te contactaremos cuando haya una nueva tanda.');
+    showMessage('Gracias. Te avisaremos cuando abramos nuevos pedidos.');
     form.reset();
   } catch {
     showMessage('No pudimos enviar tu solicitud. Inténtalo de nuevo en un momento.', true);
