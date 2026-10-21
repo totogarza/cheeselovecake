@@ -38,14 +38,16 @@ function doPost(e) {
     try {
       const sheet = SpreadsheetApp.openById(spreadsheetId).getSheetByName(SHEET_NAME);
       if (!sheet) throw new Error('No se encontró la pestaña ' + SHEET_NAME + '.');
-      sheet.appendRow([
+      const row = sheet.getLastRow() + 1;
+      sheet.getRange(row, 3).setNumberFormat('@');
+      sheet.getRange(row, 1, 1, 6).setValues([[
         new Date(),
         safeText_(name, 80),
         phone,
         flavor || 'Sin preferencia',
         'Sí',
         'Pendiente'
-      ]);
+      ]]);
       cache.put(phoneKey, '1', 300);
     } finally {
       lock.releaseLock();

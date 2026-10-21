@@ -45,6 +45,9 @@ form.addEventListener('submit', async (event) => {
 
   const endpoint = window.CHEESE_LOVE_CAKE?.googleAppsScriptUrl?.trim() || '';
   if (!endpoint) return showMessage('La lista aún no recibe solicitudes. Falta conectar Google Sheets.', true);
+  if (location.protocol === 'http:' && !['localhost', '127.0.0.1'].includes(location.hostname)) {
+    return showMessage('Por seguridad, la lista estará disponible cuando HTTPS esté activo.', true);
+  }
 
   submitButton.disabled = true;
   submitButton.setAttribute('aria-busy', 'true');

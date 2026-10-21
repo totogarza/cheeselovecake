@@ -1,5 +1,4 @@
-/* Pega aquí la URL /exec del Web App de Apps Script una vez desplegado. */
 window.CHEESE_LOVE_CAKE = {
-  googleAppsScriptUrl: "",
+  googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbx1DXl0ESl5hqCIjG1ZR16gKOg2x0TBl2_K_n50SqcpS2eG1iR63PuS67O4mUanFqti/exec",
   instagramUrl: ""
 };

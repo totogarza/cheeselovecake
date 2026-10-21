@@ -14,7 +14,7 @@ Después abre `http://localhost:8000`.
 
 ## Configuración del sitio
 
-El formulario de espera queda desactivado hasta configurar una URL de Apps Script en `googleAppsScriptUrl` dentro de `site-config.js`. El receptor y sus pasos de publicación están en [`apps-script/README.md`](apps-script/README.md). Antes de abrirlo al público, confirma que quieres aceptar solicitudes anónimas y guardar nombre, WhatsApp, sabor y consentimiento en la hoja privada.
+El formulario de espera está conectado al Web App de Apps Script configurado en `site-config.js`. El receptor está en [`apps-script/Code.gs`](apps-script/Code.gs) y guarda los registros en la hoja privada. Por seguridad, el formulario solo envía solicitudes desde una página servida por HTTPS (o durante pruebas locales).
 
 Configura `instagramUrl` con el perfil oficial cuando esté disponible. Revisa también la ciudad, las fotografías y el texto de marca antes del lanzamiento.
 
@@ -27,4 +27,4 @@ Las imágenes del sitio están en `assets/` en WebP para reducir su peso. Los te
 
 ## Lista de espera en Google Sheets
 
-La hoja privada tiene columnas para fecha, nombre, WhatsApp, sabor, consentimiento y estado. Para conectar el formulario, sigue los pasos de [`apps-script/README.md`](apps-script/README.md). El endpoint debe autorizar visitantes anónimos para recibir registros desde GitHub Pages; el formulario no enviará datos hasta configurarlo en `site-config.js`.
+La hoja privada tiene columnas para fecha, nombre, WhatsApp, sabor, consentimiento y estado. La implementación actual permite que visitantes anónimos envíen solicitudes; la hoja no es pública. Los detalles del receptor y la forma de actualizarlo están en [`apps-script/README.md`](apps-script/README.md).
