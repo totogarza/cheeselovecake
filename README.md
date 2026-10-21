@@ -20,7 +20,7 @@ Configura `instagramUrl` con el perfil oficial cuando esté disponible. Revisa t
 
 ## Publicación en GitHub Pages
 
-El workflow `.github/workflows/pages.yml` publica el contenido del repositorio en GitHub Pages cada vez que se actualiza `main`. En el repositorio, activa **Settings → Pages → Build and deployment → GitHub Actions**. No necesita compilación ni configuración de rutas base.
+El workflow `.github/workflows/pages.yml` publica el contenido del repositorio en GitHub Pages cada vez que se actualiza `main`. Pages está configurado para usar GitHub Actions y el dominio canónico `cheeselovecake.com`. No necesita compilación ni configuración de rutas base.
 
 Las imágenes del sitio están en `assets/` en WebP para reducir su peso. Los textos están en `index.html` y los colores, tipografías y puntos de quiebre en `styles.css`.
 
