@@ -1,0 +1,56 @@
+{
+  "seoTitle": "Cheese♥Cake — un buen momento",
+  "seoDescription": "Cheesecakes hechos en pequeñas cantidades, para días que merecen algo bueno.",
+  "hero": {
+    "eyebrow": "Una pausa que se queda",
+    "title": "Hay sabores\nque duran más\nque el momento.",
+    "signature": "Cheese♥Cake",
+    "caption": "Ciudad Juárez · México",
+    "poster": "/assets/hero.webp",
+    "desktopWebm": "/assets/hero-desktop-v5.webm",
+    "desktopMp4": "/assets/hero-desktop-v5.mp4",
+    "mobileWebm": "/assets/hero-mobile-v4.webm",
+    "mobileMp4": "/assets/hero-mobile-v4.mp4"
+  },
+  "collection": {
+    "eyebrow": "Cheesecakes · hechos con calma",
+    "title": "Clásicos,",
+    "accent": "con carácter.",
+    "description": "Hechos en pequeñas cantidades, para días que merecen algo bueno.",
+    "linkLabel": "Ver sabores",
+    "featureImage": "/assets/classic.webp",
+    "featureAlt": "Cheesecake clásico con una rebanada servida en un plato de cerámica",
+    "featureCaption": "El clásico · recién salido del horno",
+    "note": "Una receta, sin prisa.",
+    "footerLabel": "Explora la colección",
+    "flavors": [
+      { "name": "Clásico", "description": "El original. Siempre una buena idea.", "image": "/assets/classic.webp", "alt": "Rebanada de cheesecake clásico" },
+      { "name": "Lotus", "description": "Más intenso. Igual de cremoso.", "image": "/assets/lotus.webp", "alt": "Cheesecake con base de galleta especiada y caramelo" },
+      { "name": "Frutos rojos", "description": "Un toque fresco y sofisticado.", "image": "/assets/berries.webp", "alt": "Cheesecake con frutos rojos frescos y compota" }
+    ]
+  },
+  "story": {
+    "image": "/assets/story.webp",
+    "alt": "Un libro abierto y una taza de café bajo la luz cálida de la tarde",
+    "eyebrow": "Más que un postre",
+    "title": "Para acompañar\nlo que ya era",
+    "accent": "un buen momento.",
+    "description": "Cheese♥Cake nació de una pasión simple: crear cheesecakes que se disfruten en la vida real.",
+    "linkLabel": "Nuestra historia",
+    "sideNote": "Un momento para ti · 02"
+  },
+  "extraSections": [],
+  "waitlist": {
+    "eyebrow": "Lista de espera",
+    "title": "La próxima tanda",
+    "accent": "todavía no tiene fecha.",
+    "description": "Únete a la lista y te avisamos cuando vuelva.",
+    "buttonLabel": "Quiero estar en la próxima tanda",
+    "helperText": "Te avisaremos cuando abramos nuevos pedidos.",
+    "consentText": "Acepto que Cheese♥Cake guarde mis datos para avisarme por WhatsApp cuando haya nuevos pedidos."
+  },
+  "footer": {
+    "tagline": "Un buen momento, hecho despacio.",
+    "linkLabel": "Pedidos y novedades"
+  }
+}

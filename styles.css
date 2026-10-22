@@ -88,6 +88,18 @@ h2 em { font-weight: 400; }
 .story-content > p:not(.eyebrow) { margin-bottom: 17px; color: rgba(255,250,244,.83); font-size: 12px; line-height: 1.7; }
 .story-link { font-size: 11px; }
 .story-side-note { position: absolute; right: max(calc((100% - var(--page))/2), 32px); bottom: 31px; color: rgba(255,250,244,.64); font-size: 9px; letter-spacing: .15em; text-transform: uppercase; writing-mode: vertical-rl; }
+.extra-editorial { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 7%; padding-top: 110px; padding-bottom: 110px; }
+.extra-editorial-copy { padding-left: 7%; }
+.extra-editorial h2 { max-width: 500px; margin-bottom: 22px; }
+.extra-editorial .body-copy { max-width: 440px; }
+.extra-editorial > img { height: 430px; object-fit: cover; }
+.extra-banner { position: relative; min-height: 520px; display: flex; align-items: end; overflow: hidden; background: #302419; color: #fffaf4; }
+.extra-banner > img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
+.extra-banner-shade { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(24,18,13,.7), rgba(24,18,13,.08) 70%); }
+.extra-banner-copy { position: relative; width: min(var(--page), calc(100% - 64px)); margin: 0 auto; padding: 90px 0 70px; }
+.extra-banner h2 { max-width: 650px; }
+.extra-statement { max-width: 900px; padding-top: 120px; padding-bottom: 120px; text-align: center; }
+.extra-statement h2 { font-size: clamp(42px, 5vw, 70px); }
 .waitlist { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(48px, 8vw, 128px); padding-top: 106px; padding-bottom: 100px; }
 .waitlist-heading .eyebrow { margin-bottom: 22px; }
 .waitlist-heading h2 { margin-bottom: 17px; font-size: clamp(39px, 4.35vw, 56px); }
@@ -186,6 +198,13 @@ h2 em { font-weight: 400; }
   .story-content > p:not(.eyebrow) { max-width: 360px; margin-bottom: 13px; font-size: 10px; }
   .story-link { font-size: 10px; }
   .story-side-note { right: 17px; bottom: 20px; font-size: 7px; }
+  .extra-editorial { display: flex; flex-direction: column; align-items: stretch; gap: 25px; padding-top: 72px; padding-bottom: 72px; }
+  .extra-editorial-copy { padding-left: 0; }
+  .extra-editorial h2 { margin-bottom: 17px; }
+  .extra-editorial > img { height: auto; aspect-ratio: 1.15; }
+  .extra-banner { min-height: 450px; }
+  .extra-banner-copy { width: calc(100% - 44px); padding-bottom: 55px; }
+  .extra-statement { padding-top: 80px; padding-bottom: 80px; }
   .waitlist { display: flex; flex-direction: column; align-items: stretch; gap: 25px; padding-top: 68px; padding-bottom: 58px; }
   .waitlist-heading .eyebrow { margin-bottom: 16px; font-size: 8px; }
   .waitlist-heading h2 { margin-bottom: 13px; font-size: clamp(38px, 10vw, 46px); }

@@ -1,0 +1,21 @@
+{
+  "name": "cheese-love-cake-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:site": "node scripts/build-site.mjs",
+    "build:admin": "tinacms build --content=local",
+    "build": "npm run build:site && npm run build:admin",
+    "dev:admin": "tinacms dev --noTelemetry"
+  },
+  "dependencies": {
+    "tinacms": "3.15.0"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "4.0.3"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true,
+    "esbuild@0.28.2": true
+  }
+}
