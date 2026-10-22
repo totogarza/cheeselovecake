@@ -10,7 +10,7 @@
   --page: 1240px;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+html { scroll-padding-top: 72px; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 img { display: block; width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -51,7 +51,7 @@ h1, h2, h3, p, figure { margin-top: 0; }
 .hero-signature { margin-bottom: 0; font: 19px var(--serif); }
 .hero-caption { position: absolute; right: max(calc((100% - var(--page))/2), 32px); bottom: 30px; color: rgba(255,250,244,.72); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
 .section-wrap { width: min(var(--page), calc(100% - 64px)); margin-right: auto; margin-left: auto; }
-.collection { padding-top: 128px; padding-bottom: 82px; }
+.collection { padding-top: 72px; padding-bottom: 82px; }
 .collection-intro { min-height: 440px; display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; position: relative; }
 .collection-copy { position: relative; z-index: 1; padding: 40px 0 40px 7.2%; }
 .collection-copy .eyebrow { margin-bottom: 25px; }
@@ -132,7 +132,7 @@ h2 em { font-weight: 400; }
   .wordmark { font-size: 21px; }
   .nav-actions { gap: 12px; }
   .hero-content { left: 53%; }
-  .collection { padding-top: 90px; }
+  .collection { padding-top: 72px; }
   .collection-intro { min-height: 370px; }
   .feature-cake { height: 360px; margin-right: -24px; }
   .collection-copy { padding-left: 3%; }
