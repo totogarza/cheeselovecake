@@ -2,6 +2,8 @@
 
 Sitio estático en GitHub Pages con contenido editable mediante TinaCMS y TinaCloud. La lista de espera sigue conectada a Google Sheets mediante Apps Script.
 
+TinaCMS administra el contenido público; no recibe ni almacena respuestas del formulario. Los datos de contacto permanecen en la hoja privada. El formulario confirma la recepción mediante un identificador aleatorio antes de mostrar éxito.
+
 ## Contenido y secciones
 
 El contenido de la página está en `content/pages/home.json`. Tina edita ese archivo desde `/admin/` una vez conectado a TinaCloud. Incluye portada, colección de sabores, historia, lista de espera y pie de página. En «Secciones adicionales» se pueden agregar, quitar y reordenar tres bloques: texto e imagen, imagen a todo lo ancho y frase editorial. Estos bloques aparecen entre historia y lista de espera.

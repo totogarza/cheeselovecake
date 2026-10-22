@@ -53,16 +53,22 @@ form.addEventListener('submit', async (event) => {
   submitButton.setAttribute('aria-busy', 'true');
   showMessage('Enviando tu solicitud…');
   try {
+    const receipt = Array.from(crypto.getRandomValues(new Uint8Array(16)), (byte) =>
+      byte.toString(16).padStart(2, '0')).join('');
     await fetch(endpoint, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({ name, phone: phoneDigits, flavor, consent, website })
+      body: JSON.stringify({ name, phone: phoneDigits, flavor, consent, website, receipt })
     });
-    showMessage('Gracias. Te avisaremos cuando abramos nuevos pedidos.');
+    showMessage('Confirmando que recibimos tu solicitud…');
+    const status = await confirmReceipt(endpoint, receipt);
+    showMessage(status === 'duplicate'
+      ? 'Ya tenemos tu registro. Te avisaremos cuando abramos nuevos pedidos.'
+      : 'Gracias. Registramos tu interés y te avisaremos cuando abramos nuevos pedidos.');
     form.reset();
   } catch {
-    showMessage('No pudimos enviar tu solicitud. Inténtalo de nuevo en un momento.', true);
+    showMessage('No pudimos confirmar el registro. Espera un momento antes de intentarlo de nuevo.', true);
   } finally {
     submitButton.disabled = false;
     submitButton.removeAttribute('aria-busy');
@@ -72,4 +78,39 @@ form.addEventListener('submit', async (event) => {
 function showMessage(text, isError = false) {
   message.textContent = text;
   message.classList.toggle('is-error', isError);
+}
+
+async function confirmReceipt(endpoint, receipt) {
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    const status = await readReceiptStatus(endpoint, receipt).catch(() => 'pending');
+    if (status === 'received' || status === 'duplicate') return status;
+    if (attempt < 4) await new Promise((resolve) => setTimeout(resolve, 1200));
+  }
+  throw new Error('Receipt not confirmed');
+}
+
+function readReceiptStatus(endpoint, receipt) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    const url = new URL(endpoint);
+    url.searchParams.set('receipt', receipt);
+    url.searchParams.set('_', Date.now().toString());
+    let finished = false;
+    const finish = (result, error) => {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timeout);
+      delete window.CheeseLoveCakeReceipt;
+      script.remove();
+      if (error) reject(error);
+      else resolve(result);
+    };
+    const timeout = setTimeout(() => finish(null, new Error('Receipt check timed out')), 7000);
+    window.CheeseLoveCakeReceipt = (result) => {
+      if (result?.receipt === receipt) finish(result.status);
+    };
+    script.onerror = () => finish(null, new Error('Receipt check failed'));
+    script.src = url.toString();
+    document.head.append(script);
+  });
 }

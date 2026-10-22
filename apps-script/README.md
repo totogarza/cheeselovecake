@@ -14,6 +14,8 @@ El proyecto **Cheese♥Cake — Lista de espera** está desplegado como aplicaci
 4. Google pedirá autorizar que el script escriba en la hoja. Revisa y acepta esos permisos en tu cuenta.
 5. Copia la URL que termina en `/exec` y pégala como `googleAppsScriptUrl` en `site-config.js`.
 
-El acceso "cualquiera" permite que visitantes sin iniciar sesión envíen el formulario. El endpoint solo acepta escrituras con nombre, WhatsApp, sabor y consentimiento; valida campos, usa una trampa anti-bots y evita solicitudes duplicadas del mismo número durante cinco minutos. Al ser público, puede recibir spam. Mantén la hoja sin compartir públicamente.
+El acceso "cualquiera" permite que visitantes sin iniciar sesión envíen el formulario. El endpoint valida nombre, WhatsApp, sabor, consentimiento y un identificador aleatorio, usa una trampa anti-bots y evita solicitudes duplicadas del mismo número. La primera solicitud nueva agrega su identificador en la columna G (`ID de solicitud`). La consulta de estado solo devuelve `received`, `duplicate` o `pending` para ese identificador; nunca devuelve nombre, teléfono ni filas de la hoja. El sitio muestra éxito solo después de confirmar el registro.
+
+Al ser público, el endpoint puede recibir spam. Mantén la hoja sin compartir públicamente. Los contactos quedan en Sheets, no en TinaCMS ni en GitHub.
 
 El sitio bloquea los envíos desde páginas HTTP para proteger los datos de contacto. El formulario estará disponible al quedar activo el certificado HTTPS del dominio.
