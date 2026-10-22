@@ -1,6 +1,6 @@
 {
   "seoTitle": "Cheese♥Cake — un buen momento",
-  "seoDescription": "Cheesecakes hechos en pequeñas cantidades, para días que merecen algo bueno.",
+  "seoDescription": "Cheesecakes hechos en pequeñas cantidades, para días que merecen algo bueno. ",
   "hero": {
     "eyebrow": "Una pausa que se queda",
     "title": "Hay sabores\nque duran más\nque el momento.",
@@ -24,9 +24,24 @@
     "note": "Una receta, sin prisa.",
     "footerLabel": "Explora la colección",
     "flavors": [
-      { "name": "Clásico", "description": "El original. Siempre una buena idea.", "image": "/assets/classic.webp", "alt": "Rebanada de cheesecake clásico" },
-      { "name": "Lotus", "description": "Más intenso. Igual de cremoso.", "image": "/assets/lotus.webp", "alt": "Cheesecake con base de galleta especiada y caramelo" },
-      { "name": "Frutos rojos", "description": "Un toque fresco y sofisticado.", "image": "/assets/berries.webp", "alt": "Cheesecake con frutos rojos frescos y compota" }
+      {
+        "name": "Clásico",
+        "description": "El original. Siempre una buena idea.",
+        "image": "/assets/classic.webp",
+        "alt": "Rebanada de cheesecake clásico"
+      },
+      {
+        "name": "Lotus",
+        "description": "Más intenso. Igual de cremoso.",
+        "image": "/assets/lotus.webp",
+        "alt": "Cheesecake con base de galleta especiada y caramelo"
+      },
+      {
+        "name": "Frutos rojos",
+        "description": "Un toque fresco y sofisticado.",
+        "image": "/assets/berries.webp",
+        "alt": "Cheesecake con frutos rojos frescos y compota"
+      }
     ]
   },
   "story": {
