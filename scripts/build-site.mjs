@@ -9,8 +9,18 @@ const text = (value) => escapeHtml(value || '');
 const lines = (value) => text(value).replace(/\r?\n/g, '<br>');
 const media = (value) => {
   const path = String(value || '');
-  if (!/^\/?assets\//.test(path) || path.includes('..') || /["'<>\r\n]/.test(path)) return '';
-  return escapeHtml(path.startsWith('/') ? path : `/${path}`);
+  if (/["'<>\r\n]/.test(path)) return '';
+  if (/^\/?assets\//.test(path) && !path.includes('..')) {
+    return escapeHtml(path.startsWith('/') ? path : `/${path}`);
+  }
+  try {
+    const url = new URL(path);
+    if (url.protocol === 'https:' && url.hostname === 'assets.tina.io' &&
+        !url.username && !url.password && !url.pathname.includes('..')) {
+      return escapeHtml(url.href);
+    }
+  } catch {}
+  return '';
 };
 const img = (src, alt) => media(src) ? `<img src="${media(src)}" alt="${text(alt)}" loading="lazy">` : '';
 
